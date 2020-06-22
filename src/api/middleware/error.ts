@@ -1,6 +1,6 @@
 import "./base";
 import { Request, Response, NextFunction } from "express";
-import { ErrorBase } from "../../utils/errors";
+import { ErrorBase } from "../../utils/Error";
 
 async function ServiceErrorHandler(err, req: Request, resp: Response, next: NextFunction) {
     if (req.method == "OPTIONS")
