@@ -3,8 +3,6 @@ import Mongoose from 'mongoose';
 // add docker
 // docker run -d -p 27017:27017 mongo:4
 
-console.log(Mongoose)
-
 let dataBase: Mongoose.Connection;
 
 Mongoose.set("useFindAndModify", true)

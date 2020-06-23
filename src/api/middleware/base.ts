@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import cors from 'cors';
 import { Request, Response, NextFunction } from "express";
 import url from 'url';
 import { RequestContextClass } from "../../types/requestContext";
@@ -21,6 +22,9 @@ export const baseMiddleWares = [
         resp.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, Account, Token, Signature, Nonce, Sub");
         next();
     },
+
+    //Enables cors
+    cors(),
 
     bodyParser.urlencoded({
         extended: true
